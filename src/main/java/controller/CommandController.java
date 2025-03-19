@@ -10,9 +10,8 @@ public class CommandController {
 
     public void inputCommand() {
         while (true) {
-            System.out.print(OutputView.COMMAND);
-            String command = InputView.commandInput();
-            System.out.println(command);
+            OutputView.printCommandString();
+            OutputView.printCommand(InputView.commandInput());
         }
     }
 }

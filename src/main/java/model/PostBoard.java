@@ -13,10 +13,12 @@ public class PostBoard {
         postBoard.add(post);
     }
 
-    @Override
-    public String toString() {
-        return "PostBoard{" +
-                "postBoard=" + postBoard +
-                '}';
+    public Post getPost(int id) {
+        for (Post post : postBoard) {
+            if (post.getId() == id) {
+                return post;
+            }
+        }
+        return null;
     }
 }

@@ -38,15 +38,17 @@ public class CommandController {
                 }
 
                 case OutputView.CHECK_COMMAND -> {
-
+                    OutputView.printWhatPost(command);
+                    String targetId = InputView.commandInput();
+                    System.out.println(postBoard.getPost(Integer.parseInt(targetId)));
                 }
 
                 case OutputView.DELETE_COMMAND -> {
-
+                    OutputView.printWhatPost(command);
                 }
 
                 case OutputView.MODIFY_COMMAND -> {
-
+                    OutputView.printWhatPost(command);
                 }
 
                 case OutputView.EXIT_COMMAND -> {

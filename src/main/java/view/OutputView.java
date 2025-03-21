@@ -29,5 +29,9 @@ public class OutputView {
         System.out.print("내용 : ");
     }
 
+    public static void printWhatPost(String command) {
+        System.out.printf("어떤 게시물을 %s할까요? ", command);
+    }
+
 }
 

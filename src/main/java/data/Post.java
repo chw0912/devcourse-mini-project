@@ -1,21 +1,21 @@
-package model;
+package data;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class Post {
     private int id;
     private String title;
-    private String content;
-    private final LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
+    private String body;
+    private final LocalDate createdAt;
+    private LocalDate updatedAt;
 
 
     public Post(int id, String title, String content) {
         this.id = id;
         this.title = title;
-        this.content = content;
-        this.createdAt = LocalDateTime.now();
-        this.updatedAt = LocalDateTime.now();
+        this.body = content;
+        this.createdAt = LocalDate.now();
+        this.updatedAt = LocalDate.now();
     }
 
     public int getId() {
@@ -30,19 +30,23 @@ public class Post {
         this.title = title;
     }
 
-    public String getContent() {
-        return content;
+    public String getBody() {
+        return body;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public LocalDate getCreatedAt() {
+        return createdAt;
     }
 
-    public LocalDateTime getUpdatedAt() {
+    public void setBody(String body) {
+        this.body = body;
+    }
+
+    public LocalDate getUpdatedAt() {
         return updatedAt;
     }
 
-    public void setUpdatedAt(LocalDateTime updatedAt) {
+    public void setUpdatedAt(LocalDate updatedAt) {
         this.updatedAt = updatedAt;
     }
 
@@ -51,7 +55,7 @@ public class Post {
         return "Post{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", content='" + content + '\'' +
+                ", body='" + body + '\'' +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
                 '}';

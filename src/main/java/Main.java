@@ -1,9 +1,10 @@
-import controller.CommandController;
+import controller.PostController;
+import sys.Application;
 
 public class Main {
 
     public static void main(String[] args) {
-        CommandController controller = new CommandController();
-        controller.inputCommand();
+        Application app = new Application();
+        app.run();
     }
 }
